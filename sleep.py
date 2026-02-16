@@ -26,12 +26,12 @@ def run_os():
     while sleep_queue or ready_queue:
         print(f"\n--- Time {system_time} ---")
 
-        while sleep_queue and sleep_queue[0][0] <= system_time:
-            wake_time, proc_name = sleep_queue.pop(0)
-
-            print(f"INTERRUPT: {proc_name}")
-            ready_queue.append(proc_name)
-
+        # while sleep_queue and sleep_queue[0][0] <= system_time:
+        #     wake_time, proc_name = sleep_queue.pop(0)
+        #
+        #     print(f"INTERRUPT: {proc_name}")
+        #     ready_queue.append(proc_name)
+        #
         if ready_queue:
             proc = ready_queue.pop(0)
             print(f"CPU: Running {proc}")
